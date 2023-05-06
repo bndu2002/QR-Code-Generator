@@ -1,0 +1,27 @@
+{
+  "dependencies": {
+    "express": "^4.18.2",
+    "jsqr": "^1.4.0",
+    "nodemon": "^2.0.22",
+    "qrcode": "^1.5.3"
+  },
+  "name": "qr-code-generator",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon src/index.js",
+    "build" :"npm i"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bndu2002/QR-Code-Generator.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bndu2002/QR-Code-Generator/issues"
+  },
+  "homepage": "https://github.com/bndu2002/QR-Code-Generator#readme",
+  "description": ""
+}
