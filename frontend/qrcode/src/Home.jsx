@@ -1,12 +1,11 @@
 import React from "react";
 import { useState } from "react";
 import { DownloadOutlined } from "@ant-design/icons";
-import { Button} from "antd";
+import { Button } from "antd";
 import "./index.css";
 // import Webcam from "react-webcam";
 // import { Html5QrcodeScanner } from "html5-qrcode";
-import {useNavigate } from "react-router-dom";
-
+import { useNavigate } from "react-router-dom";
 
 function Home() {
   const [src, setsrc] = useState("");
@@ -15,7 +14,9 @@ function Home() {
   // const [size, setSize] = useState("large"); // default is 'middle'
   // const [qrCodeMessage, setQrCodeMessage] = useState("");
   // const webcamRef = useRef(null);
-  const navigate = useNavigate()
+  const navigate = useNavigate();
+  const backendURL =
+    "https://qr-code-generator-22ju-oexy0lfdf-bndusharma2002-gmailcom.vercel.app";
 
   let fetchObject = {
     method: "GET",
@@ -27,7 +28,10 @@ function Home() {
 
   const genrerateCode = async () => {
     try {
-      const response = await fetch(`/code?codeText=${codeText}`, fetchObject);
+      const response = await fetch(
+        `${backendURL}/code?codeText=${codeText}`,
+        fetchObject
+      );
       let data;
       console.log("response is here ======>>>>", response);
       if (response.ok) {
@@ -53,18 +57,17 @@ function Home() {
     setsrc("");
   };
 
-  const handleScanClicked = ()=>{
-    
-    navigate('/scan')
-  }
-
-
+  const handleScanClicked = () => {
+    navigate("/scan");
+  };
 
   return (
     <>
       <div className="outer">
         <div className="inner">
-          <h1 className="text" style={{color : "white" , marginBottom : "70px"}}>Get a QR code Now for your Website!</h1>
+          <h1 className="text" style={{ color: "white", marginBottom: "70px" }}>
+            Get a QR code Now for your Website!
+          </h1>
           <div className="input_div">
             <input
               type="text"
@@ -74,7 +77,11 @@ function Home() {
             />
           </div>
 
-          {src && <div style={{marginBottom : "20px"}}><img src={src} alt="QR code" width="150" height="150" /></div>}
+          {src && (
+            <div style={{ marginBottom: "20px" }}>
+              <img src={src} alt="QR code" width="150" height="150" />
+            </div>
+          )}
           <div className="genratebtn">
             <button onClick={genrerateCode}>generate QR code</button>
             {/* {scanClicked && <Webcam audio={false} ref={webcamRef} />} */}
