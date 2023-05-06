@@ -1,14 +1,14 @@
 .outer {
-  background-color: rgb(25,25,112);
+  background-color: rgb(25, 25, 112);
   height: 540px;
   display: flex;
   align-items: center;
   text-align: center;
-  
-  
+
+
 }
 
-.inner{
+.inner {
   margin-left: 330px;
 }
 
@@ -33,42 +33,45 @@
   height: 50px;
   border-radius: 30px;
   font-size: 18px;
-  background-color: rgb(60,179,113);
+  background-color: rgb(60, 179, 113);
   color: #fff;
   transition: all 0.4s ease-in-out;
   /* margin-left: 479px; */
 }
 
 .genratebtn button:hover {
-  background-color: rgb(167,252,0);
+  background-color: rgb(167, 252, 0);
   color: black;
   font-size: larger;
   cursor: pointer;
 }
 
-.scan{
-  background-color: rgb(25,25,112);
+.scan {
+  background-color: rgb(25, 25, 112);
   height: 530px;
   text-align: center;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.scanned_data{
- font-size: larger;
- color: white;
- 
+
+.scanned_data {
+  font-size: larger;
+  color: white;
+
 }
-.back_btn{
+
+.back_btn {
   width: 200px;
   height: 50px;
   border-radius: 30px;
   font-size: 18px;
-  background-color: rgb(226,88,34);
+  background-color: rgb(226, 88, 34);
   color: #fff;
   transition: all 0.2s ease-in-out;
 }
-.back_btn:hover{
+
+.back_btn:hover {
   background-color: crimson;
   cursor: pointer;
   font-size: larger;

@@ -1,5 +1,5 @@
 import React from "react";
-import { useState, useRef } from "react";
+import { useState } from "react";
 import { DownloadOutlined } from "@ant-design/icons";
 import { Button} from "antd";
 import "./index.css";
@@ -11,8 +11,8 @@ import {useNavigate } from "react-router-dom";
 function Home() {
   const [src, setsrc] = useState("");
   const [codeText, setcodeText] = useState("");
-//   const [scanClicked, setscanClicked] = useState(false);
-  const [size, setSize] = useState("large"); // default is 'middle'
+  //const [scanClicked, setscanClicked] = useState(false);
+  // const [size, setSize] = useState("large"); // default is 'middle'
   // const [qrCodeMessage, setQrCodeMessage] = useState("");
   // const webcamRef = useRef(null);
   const navigate = useNavigate()
@@ -84,7 +84,7 @@ function Home() {
           <Button
             type="primary"
             icon={<DownloadOutlined />}
-            size={size}
+            size="large"
             onClick={downloadQRCode}
             style={{ marginTop: "20px" }}
           >
