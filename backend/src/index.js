@@ -8,7 +8,10 @@ const bodyParser = require('body-parser');//middleware to parse incoming request
 // parse application/json requests with a size limit of 50mb
 // app.use(bodyParser.json({ limit: "50mb" }));
 
-app.use(cors())
+app.use(cors({
+    origin: '*',
+}));
+
 app.use(bodyParser.json());
 
 app.use(bodyParser.urlencoded({ extended: true }));
