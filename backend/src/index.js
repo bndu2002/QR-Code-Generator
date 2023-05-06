@@ -1,12 +1,14 @@
 const express = require('express')
 const app = express()
 const route = require('./route/route')
+const cors = require('cors')
 const Port = 3001
 
 const bodyParser = require('body-parser');//middleware to parse incoming request bodies
 // parse application/json requests with a size limit of 50mb
 // app.use(bodyParser.json({ limit: "50mb" }));
 
+app.use(cors())
 app.use(bodyParser.json());
 
 app.use(bodyParser.urlencoded({ extended: true }));
